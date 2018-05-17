@@ -17,7 +17,7 @@ def on_message(client, userdata, msg):
 client = mqtt.Client()
 client.username_pw_set("wmejyshn", "sKbB0eN90aOx")
 client.on_connect = on_connect
-clinet.on_message = on_message
+client.on_message = on_message
 
 client.connect(MQTT_SERVER, 19969, 60)
 
