@@ -2,13 +2,13 @@ import paho.mqtt.client as mqtt
 import time
 
 MQTT_SERVER = "m14.cloudmqtt.com"
-MQTT_TOPIC_ROOT = "NCAP1"
+MQTT_TOPIC_ROOT = "NCAP1/*"
 
 
 def on_connect(client, userdata, flags, rc):
 	print("Connected with result code "+str(rc))
 
-	client.subscribe(MQTT_PATH)
+	client.subscribe(MQTT_TOPIC_ROOT)
 
 def on_message(client, userdata, msg):
 	print(msg.topic+" "+str(msg.payload))
