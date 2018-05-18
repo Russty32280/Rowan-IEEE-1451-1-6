@@ -53,7 +53,7 @@ print(NCAP1.TIMS[0].Channel[0])
 
 NCAP1.TIMS[0].Channel[0].TransducerReading = 100
 
-print(NCAP1.TIM[0].Channel[0].TransducerReading)
+print(NCAP1.TIMS[0].Channel[0].TransducerReading)
 
 
 
