@@ -37,8 +37,8 @@ def on_message(client, userdata, msg):
 
 def Initialize_NCAP(NCAP_ID, TIM_ID, ChannelID):
 	Channel1 = Channel(1)
-	TIM1 = TIM([Channel1], 1)
-	NCAP1 = NCAP(1, [TIM1])
+	TIM1 = TIM(1)
+	NCAP1 = NCAP(1)
 	return(NCAP1)
 	
 NCAP1 = Initialize_NCAP(1,1,1)
