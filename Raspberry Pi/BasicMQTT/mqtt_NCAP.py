@@ -2,8 +2,35 @@ import paho.mqtt.client as mqtt
 import time
 
 MQTT_SERVER = "m14.cloudmqtt.com"
-MQTT_TOPIC_ROOT = "NCAP1/*"
+MQTT_TOPIC_ROOT = "NCAP1"
 
+TIMS = []
+
+class NCAP:
+	def __init__(self, NCAPID=0, TIMS=[])
+		self.NCAPID = NCAPID
+		self.TIMS = []
+
+
+class TIM:
+	def __init__(self, TIM_ID = 0, Channel=[]):
+		self.Channel = Channel
+		self.TIM_ID = TIM_ID
+
+class Channel:
+	def __init__(self, ChannelID=0, TransducerType=0, TransducerReading=0):
+		self.ChannelID = ChannelID
+		self.TransducerType = TransducerType
+		self.TransducerReading = TransducerReading
+
+
+Channel1 = Channel(1)
+TIM1 = TIM([Channel1], 1)
+NCAP1 = NCAP(1, [TIM1])
+
+NCAP1.TIM1.Channel1.TransducerReading = 100
+
+print(NCAP1.TIM1.Channel1.TransducerReading)
 
 def on_connect(client, userdata, flags, rc):
 	print("Connected with result code "+str(rc))
@@ -12,6 +39,9 @@ def on_connect(client, userdata, flags, rc):
 
 def on_message(client, userdata, msg):
 	print(msg.topic+" "+str(msg.payload))
+
+def Initialize_TIM(TIM_ID)
+	
 
 
 client = mqtt.Client()
