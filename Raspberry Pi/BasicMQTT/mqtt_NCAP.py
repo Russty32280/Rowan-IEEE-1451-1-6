@@ -14,7 +14,7 @@ class NCAP:
 
 class TIM:
 	def __init__(self, TIM_ID = 0):
-		self.Channel = Channel
+		self.Channel = []
 		self.TIM_ID = TIM_ID
 
 class Channel:
@@ -38,14 +38,16 @@ def on_message(client, userdata, msg):
 def Initialize_NCAP(NCAP_ID, TIM_ID, ChannelID):
 	Channel1 = Channel(1)
 	TIM1 = TIM(1)
+	TIM1.Channel = [Channel1]
 	NCAP1 = NCAP(1)
+	NCAP1.TIMS = [TIM1]
 	return(NCAP1)
 	
 NCAP1 = Initialize_NCAP(1,1,1)
 
-NCAP1.TIM1.Channel1.TransducerReading = 100
+NCAP1.TIMS(0).Channel(0).TransducerReading = 100
 
-print(NCAP1.TIM1.Channel1.TransducerReading)
+print(NCAP1.TIM(0).Channel(0).TransducerReading)
 
 
 
