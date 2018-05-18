@@ -38,7 +38,7 @@ def on_message(client, userdata, msg):
 def Initialize_NCAP(NCAP_ID, TIM_ID, ChannelID):
 	Channel1 = Channel(1)
 	TIM1 = TIM(1)
-	TIM1.Channel = [Channel1]
+	TIM1.Channel = [Channel1, Channel1]
 	NCAP1 = NCAP(1)
 	NCAP1.TIMS = [TIM1]
 	return(NCAP1)
@@ -48,7 +48,8 @@ NCAP1 = Initialize_NCAP(1,1,1)
 print(NCAP1)
 print(NCAP1.TIMS)
 print(NCAP1.TIMS[0])
-print(NCAP1.TIMS.Channel)
+print(NCAP1.TIMS[0].Channel)
+print(NCAP1.TIMS[0].Channel[0])
 
 NCAP1.TIMS[0].Channel[0].TransducerReading = 100
 
