@@ -31,8 +31,10 @@ def on_connect(client, userdata, flags, rc):
 	print("Connected with result code "+str(rc))
 
 	client.subscribe(MQTT_TOPIC_ROOT)
+	client.subscribe("NCAP1/TIM1")
 
 def on_message(client, userdata, msg):
+	print(msg.topic)
 	print(msg.topic+" "+str(msg.payload))
 
 def Initialize_NCAP(NCAP_ID, TIM_ID, ChannelID):
