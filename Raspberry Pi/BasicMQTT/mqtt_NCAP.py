@@ -45,6 +45,11 @@ def Initialize_NCAP(NCAP_ID, TIM_ID, ChannelID):
 	
 NCAP1 = Initialize_NCAP(1,1,1)
 
+print(NCAP1)
+print(NCAP1.TIMS)
+print(NCAP1.TIMS(0))
+print(NCAP1.TIMS.Channel)
+
 NCAP1.TIMS(0).Channel(0).TransducerReading = 100
 
 print(NCAP1.TIM(0).Channel(0).TransducerReading)
