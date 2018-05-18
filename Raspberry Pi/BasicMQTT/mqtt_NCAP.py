@@ -7,13 +7,13 @@ MQTT_TOPIC_ROOT = "NCAP1"
 TIMS = []
 
 class NCAP:
-	def __init__(self, NCAPID=0, TIMS=[])
+	def __init__(self, NCAPID=0)
 		self.NCAPID = NCAPID
 		self.TIMS = []
 
 
 class TIM:
-	def __init__(self, TIM_ID = 0, Channel=[]):
+	def __init__(self, TIM_ID = 0):
 		self.Channel = Channel
 		self.TIM_ID = TIM_ID
 
