@@ -24,13 +24,8 @@ class Channel:
 		self.TransducerReading = TransducerReading
 
 
-Channel1 = Channel(1)
-TIM1 = TIM([Channel1], 1)
-NCAP1 = NCAP(1, [TIM1])
 
-NCAP1.TIM1.Channel1.TransducerReading = 100
 
-print(NCAP1.TIM1.Channel1.TransducerReading)
 
 def on_connect(client, userdata, flags, rc):
 	print("Connected with result code "+str(rc))
@@ -40,8 +35,19 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
 	print(msg.topic+" "+str(msg.payload))
 
-def Initialize_TIM(TIM_ID)
+def Initialize_NCAP(NCAP_ID, TIM_ID, ChannelID):
+	Channel1 = Channel(1)
+	TIM1 = TIM([Channel1], 1)
+	NCAP1 = NCAP(1, [TIM1])
+	return(NCAP1)
 	
+NCAP1 = Initialize_NCAP()
+
+NCAP1.TIM1.Channel1.TransducerReading = 100
+
+print(NCAP1.TIM1.Channel1.TransducerReading)
+
+
 
 
 client = mqtt.Client()
