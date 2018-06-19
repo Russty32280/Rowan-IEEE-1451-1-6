@@ -44,6 +44,42 @@ def Initialize_NCAP(NCAP_ID, TIM_ID, ChannelID):
 	NCAP1 = NCAP(1)
 	NCAP1.TIMS = [TIM1]
 	return(NCAP1)
+
+
+
+def SingleTransducerRead():
+
+def SingleTransducerWrite():
+
+def MultiChannelRead():
+
+def MultiChannelWrite():
+
+def SingleTransducerRead_MultiTIM():
+
+def SingleTransducerWrite_MultiTIM():
+
+def MultiChannelRead_MultiTIM():
+
+def MutliChannelWrite_MultiTIM():
+
+def SingleTransducerRead_MultiNCAP():
+
+def SingleTransducerWrite_MultiNCAP():
+
+def MultiChannelRead_MultiNCAP():
+
+def MultiChannelWrite_MultiNCAP():
+
+def SingleTransducerRead_MultiTIM_MultiNCAP():
+
+def SingleTransducerWrite_MultiTIM_MultiNCAP():
+
+def MultiChannelRead_MultiTIM_MultiNCAP():
+
+def MultiChannelWrite_MultiTIM_MultiNCAP():
+
+
 	
 NCAP1 = Initialize_NCAP(1,1,1)
 
