@@ -1,1 +1,2 @@
 # Rowan-IEEE-1451-1-6
+As part of the on going revitalization of the IEEE 1451 family of standards, we at the Rowan University Smart Measurement and Research Technology Lab aim to provide reference designs and learning material to help expand the adoption of this standard. This repository is focused on the IEEE 1451-1-6 effort which aims to provide 
