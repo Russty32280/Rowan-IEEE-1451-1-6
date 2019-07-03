@@ -1,0 +1,12 @@
+<roster>
+    <tim>
+        <mac_address>B4:E6:2D:69:D7:74</mac_address>
+        <timID>ESP8266-100</timID>
+        <teds>
+        	<channel1>1</channel1>
+        	<channel2>2</channel2>
+        	<channel3>3</channel3>
+        </teds>
+    </tim>
+<tim>
+<mac_address>B4:E6:2D:69:D7:75</mac_address><timID>1</timID><teds>3</teds></tim></roster>
